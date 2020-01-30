@@ -1,12 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 const HistoryItem = () => (
-
+  <p>This is where the history will go</p>
 );
 
-HistoryItem.propTypes = {
-  
-}
 
 export default HistoryItem;
