@@ -1,8 +1,11 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
-const ResponseItem = () => (
-  <p>This is where the response will go</p>
+const ResponseItem = ({ response }) => (
+  <p>{response}</p>
 );
+ResponseItem.propTypes = {
+  response: PropTypes.string.isRequired
+};
 
 export default ResponseItem;

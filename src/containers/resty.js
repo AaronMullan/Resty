@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import { apiCall } from '../services/apiCall';
 import APIForm from '../components/form/APIform';
+import ResponseItem from '../components/responseItem/ResponseItem';
+import HistoryItem from '../components/history/HistoryItem';
 
 export default class Resty extends Component {
   state = {
     url: '',
     jsoninput: '',
-    method: ''
+    method: '',
+    response: ''
   }
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value });
   }
-  handleSubmit = event => {
+  onSubmit = event => {
     event.preventDefault();
     this.fetch();
     
@@ -19,7 +22,9 @@ export default class Resty extends Component {
 
   fetch = () => {
     return apiCall()
-      .then(json => this.setState({ json }));
+      .then(response => {
+        this.setState({ response });
+      });
   }
   render() {
 
@@ -27,7 +32,14 @@ export default class Resty extends Component {
       <>
         <APIForm 
           handleChange={this.handleChange}
+          onSubmit={this.onSubmit}
+          url={this.state.url}
+          jsonInput={this.state.jsoninput}
         />
+        <ResponseItem 
+          response={this.state.response}
+        />
+        <HistoryItem />
          
       </>
     );
