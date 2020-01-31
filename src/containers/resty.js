@@ -17,14 +17,11 @@ export default class Resty extends Component {
   onSubmit = event => {
     event.preventDefault();
     this.fetch();
-    
   };
-
+  
   fetch = () => {
-    return apiCall()
-      .then(response => {
-        this.setState({ response });
-      });
+    return apiCall(this.state.url, this.state.method, this.state.jsoninput)
+      .then(response => this.setState({ response: JSON.stringify(response, null, 2) }));
   }
   render() {
 

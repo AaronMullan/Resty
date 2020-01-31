@@ -1,6 +1,12 @@
-export const apiCall = () => fetch('https://ron-swanson-quotes.herokuapp.com/v2/quotes/')
-  .then(res => res.json())
-  .then(res => JSON.stringify(res[0]).slice(1, -1));
+export const apiCall = (url, method, jsoninput) => fetch(url, { 
+  method: method, 
+  headers: { 'Content-Type': 'application/json' },
+  body: jsoninput
+})
+  .then(res => res.json());
 
+
+// export const apiCall = (url) => fetch(`${url}`)
+//   .then(res => res.json());
   
 

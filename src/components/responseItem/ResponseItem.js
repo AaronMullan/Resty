@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const ResponseItem = ({ response }) => (
-  <p>{response}</p>
+  <pre>{response}</pre>
 );
 ResponseItem.propTypes = {
   response: PropTypes.string.isRequired
