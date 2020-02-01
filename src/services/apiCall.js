@@ -4,4 +4,3 @@ export const apiCall = (url, method, jsoninput) => fetch(url, {
   body: ['POST', 'PUT', 'PATCH'].includes(method) ? jsoninput : null
 })
   .then(res => res.json());
-
