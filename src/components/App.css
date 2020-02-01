@@ -1,0 +1,22 @@
+*{
+  font-family: monospace;
+}
+
+.Header{
+  background-color: royalblue;
+  text-align: center;
+}
+.Resty{
+  background-color: greenyellow;
+}
+.History{
+  background-color: lightblue;
+}
+.ResponseItem{
+  background-color: lightcoral;
+}
+
+.Footer{
+  background-color: red;
+  text-align: center;
+}

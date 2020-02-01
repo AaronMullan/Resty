@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import HistoryItem from './HistoryItem';
+import styles from '../App.css';
 
 const History = ({ history }) => {
   const historyElements = history.map((item, i) => (
@@ -9,9 +10,14 @@ const History = ({ history }) => {
     </li>
   ));
   return (
-    <ul>
-      {historyElements}
-    </ul>
+    <>
+      <div className={styles.History}>
+        <h2>History</h2>
+        <ul>
+          {historyElements}
+        </ul>
+      </div>
+    </>
   );
 };
 

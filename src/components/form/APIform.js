@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const APIForm = ({ url, jsonInput, onSubmit, handleChange }) => (
   <form  onSubmit={onSubmit}>
     <input onChange={handleChange} type="text" name="url" placeholder="URL" value={url} /> 
-    <textarea onChange={handleChange} name="jsoninput" value={jsonInput} ></textarea>
+    <textarea onChange={handleChange} name="jsoninput" placeholder="JSON input"value={jsonInput} ></textarea>
     <input onChange={handleChange} type="radio" name="method" value="GET" ></input>
     <label htmlFor="GET">GET</label>
     <input onChange={handleChange} type="radio" name="method" value="POST"></input>

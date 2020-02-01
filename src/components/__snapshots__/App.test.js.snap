@@ -2,6 +2,8 @@
 
 exports[`App component renders App 1`] = `
 <Fragment>
+  <Header />
   <Resty />
+  <Footer />
 </Fragment>
 `;
