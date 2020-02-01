@@ -5,7 +5,7 @@ import HistoryItem from './HistoryItem';
 const History = ({ history }) => {
   const historyElements = history.map((item, i) => (
     <li key={i}>
-      <HistoryItem item={history} />
+      <HistoryItem historyItem={item} />
     </li>
   ));
   return (

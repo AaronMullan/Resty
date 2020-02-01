@@ -18,13 +18,14 @@ export default class Resty extends Component {
   onSubmit = event => {
     event.preventDefault();
 
-    this.setState(state => ({
-      history: [...state.history, {
-        method: state.method,
-        url: state.url 
+    this.setState(prevstate => ({
+      history: [...prevstate.history, {
+        method: this.state.method,
+        url: this.state.url,
+        jsoninput: this.state.url
       }] 
-    }),
-    this.fetch());
+    }));
+    this.fetch();
   };
   
   fetch = () => {
